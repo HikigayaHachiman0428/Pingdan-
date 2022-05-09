@@ -1,0 +1,4 @@
+@import "/pages/order/index.wxss";
+.red-dot{
+  left:180rpx;
+}

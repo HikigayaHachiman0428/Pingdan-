@@ -1,0 +1,37 @@
+<view class="goodsList">
+  <view class="a-gooods">
+    <view>
+      <view class="goods-info">
+        <view class="img-box">
+          <image src="{{detail.menu_logo}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="goods-title">{{detail.menu_name}}</view>
+          <view class="collage-people">{{detail.collage_people}}人团</view>
+          <view style='display:flex;'>
+            <view class="goods-price">¥ {{detail.collage_price}}</view>
+            <view class="good_number">剩余:{{detail.good_number}}</view>
+          </view>
+          
+        </view>
+      </view>
+      <view class="collage-join">
+      1、下单开团/参团  一  2、邀请好友参团  一  3、人满拼团成功
+      </view>
+      <view class="collage-list" wx:if="{{collageList.length != 0}}">
+        <view class="collage-word">以下小伙伴正在发起拼团,您可以直接参加</view>
+        <view class="collage-info" wx:for="{{collageList}}">
+            <image class="creator-img" src="{{item.creator.userPic}}"></image>
+            <view style="margin-left:10px;">
+              <view class="creator-nickName">{{item.creator.nickName}}</view>
+              <view class="collage-time">还差{{detail.collage_people-item.people}}人成团,剩余{{countDownDay}}天{{countDownHour}}小时{{countDownMinute}}分钟{{countDownSecond}}秒</view>        
+            </view>
+            <button class="join-button" bindtap='payOrder'>我要参团</button>
+        </view>
+      </view>
+      <view class="collage-list" wx:else>
+        <view class="collage-word">暂无任何拼团信息</view>
+      </view>
+    </view>
+  </view>
+</view>

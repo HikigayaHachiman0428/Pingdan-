@@ -1,0 +1,15 @@
+/* pages/brandShop/brandShop.wxss */
+.type-detail{ padding-bottom:10px; display: flex; flex-wrap: wrap; padding: 0 10px}
+.type-detail>navigator{ overflow:hidden; box-sizing:border-box; width: 50%; text-align: center; padding: 0 5px; }
+.type-detail navigator image{width:100%;height:250rpx; }
+.book-detail>text{font-size:15px;color:#505050;display:block;
+text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;  -webkit-line-clamp: 1; overflow:hidden; font-weight: bold;
+ }
+.book-detail button,.book-result-detail button{float:left;width:27px;height:28px;border-radius:14px;}
+.book-detail>view text{float:left;}
+.book-detail>view view{float:left;}
+.book-detail>view{width:100%;overflow:hidden;position:relative;height:28px; display: flex; align-items: center; justify-content: space-between}
+.book-detail button.reduce,.book-result-detail button.reduce{background:url(http://bmob-cdn-8770.b0.upaiyun.com/2017/03/01/3b2b07294075d7b78025de3a115733c1.png) no-repeat;background-size:100% auto;}
+.book-detail button.add,.book-result-detail button.add{background:url(http://bmob-cdn-8770.b0.upaiyun.com/2017/03/01/23438bf040336dd980b7bfdd294d0265.png) no-repeat;background-size:100% auto;}
+.book-detail .money{font-size:15px;color:#fa4b22;line-height:27px;}
+.nodata{ font-size: 28rpx; text-align: center; color: #999; padding-top: 20px; margin: 0 auto;}

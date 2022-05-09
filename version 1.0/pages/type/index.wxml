@@ -1,0 +1,38 @@
+<view class="book-box">
+
+  <scroll-view class='swipter-nav' scroll-y="true" style="height:{{winHeight}}px; width:200rpx">
+    <view class="swiper-vertical-tab">
+      <view wx:for="{{good}}" wx:key="item" class="{{currentTab==item.id ? 'on' : ''}}"  bindtap="chooseType" data-foodtype="{{item.id}}">
+      {{item.foodType}}
+      </view> 
+    </view>
+  </scroll-view>
+
+  <scroll-view class="swiper-vertical-box" scroll-y="true" style="height:{{winHeight}}px;width:200rpx">
+    <view  wx-if="{{currentTab==item.id}}" class="vertical-list" wx:for="{{good}}" wx:key="foodType" wx:for-index="idx"> 
+      <text class="title">{{item.foodType}}</text>
+      <block wx:if="{{item.data.length}}">
+        <view class="type-detail">
+          <view wx:for="{{item.data}}" wx:key="foodDetail" wx:for-index="jdx">
+            <navigator url="/pages/good/index?id={{item.objectId}}">
+              <image src="{{item.menu_logo}}!/fxfn/100x100" mode="aspectFill"></image>
+              <view class="book-detail">
+                <text>{{item.menu_name}}</text>
+                <view>
+                    <text class="money">￥{{item.price}}</text>
+                    <view class="operations smallsize">
+                        销量：{{item.sale_number}}
+                    </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+          <view class='noshop'>暂无商品</view>
+      </block>
+    </view>
+  </scroll-view>
+
+</view>  

@@ -1,0 +1,91 @@
+<import src="/dist/loadmore/index.wxml" />
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">未使用</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已使用</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已过期</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 41}}px;overflow:hidden;" bindchange="bindChange" circular="true">
+    <!-- 未使用 -->
+    <swiper-item style="overflow:auto;">
+    <view class="container" wx:if="{{allOrder.length != 0}}">
+      <view style='margin:10px;' wx:for="{{allOrder}}" wx:key="item">
+        <view class="stamp stamp01">
+          <view class='wrap'>
+          <view class="par">
+              <text class='title'>优惠券</text>
+              <text class="sign">￥</text>
+              <text class='span'>{{item.price}}.00</text>
+              <text class='s'>优惠券</text>
+              <text class='p'>满{{item.nprice}}元可用</text>
+          </view>
+          <view class="copy">即将过期<text class='p'>{{item.createdAt}}</text> <text class='p' style='margin-top:0'>{{item.updateAt}}</text></view>
+          <view class='i'></view>
+          </view>
+        </view>
+        </view>
+    </view>
+     <view wx:else>
+        <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">没有未使用的红包</view>
+        </view>
+    </view> 
+    </swiper-item>
+
+
+    <!-- 已使用 -->
+    <swiper-item  style="overflow:auto;">
+    <view class="container" wx:if="{{noPayment.length != 0}}">
+        <view style='margin:10px;' wx:for="{{noPayment}}" wx:key="item">
+        <view class="stamp stamp02">
+          <view class='wrap'>
+          <view class="par">
+              <text class='title'>全品类蛋糕券</text>
+              <text class="sign">￥</text>
+              <text class='span'>{{item.price}}.00</text>
+              <text class='s'>优惠券</text>
+              <text class='p'>满{{item.nprice}}元可用</text>
+          </view>
+          <view class="copy">已经使用<text class='p'>{{item.createdAt}}</text> <text class='p' style='margin-top:0'>{{item.updateAt}}</text></view>
+          <view class='i'></view>
+          </view>
+        </view>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">没有已使用的红包</view>
+        </view>
+    </view>
+    </swiper-item>
+
+    <!--已过期-->
+    <swiper-item  style="overflow:auto;">
+        <view class="container" wx:if="{{shipments.length != 0}}">
+        <view style='margin:10px;' wx:for="{{shipments}}" wx:key="item">
+        <view class="stamp stamp03">
+          <view class='wrap'>
+          <view class="par">
+              <text class='title'>全品类蛋糕券</text>
+              <text class="sign">￥</text>
+              <text class='span'>{{item.price}}.00</text>
+              <text class='s'>优惠券</text>
+              <text class='p'>满{{item.nprice}}元可用</text>
+          </view>
+          <view class="copy">已经过期<text class='p'>{{item.createdAt}}</text> <text class='p' style='margin-top:0'>{{item.updateAt}}</text></view>
+          <view class='i'></view>
+          </view>
+        </view>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">没有已过期的红包</view>
+        </view>
+    </view>
+    </swiper-item>
+
+</swiper>

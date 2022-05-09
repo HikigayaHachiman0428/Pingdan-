@@ -1,0 +1,24 @@
+<!--pages/expressInfo/index.wxml-->
+<view style='background:#f8f8f8;'>
+  <view wx:if="{{show}}">
+    <view>
+      <i-panel title="快递公司：{{expressInfo.logisticCode}}"></i-panel>
+    </view>
+    <view class="expressInfo">
+      <i-steps direction="vertical">
+        <i-step wx:for="{{expressInfo.traces}}"  wx:key="unique" status="{{index == 0  ? 'finish' :''}}" icon="barrage">
+            <view slot="title" style="font-size:14px;color:{{index == 0  ? '#444' :'#888'}}">
+                {{item.acceptTime}}
+            </view>
+            <view slot="content" style="font-size:14px;color:{{index == 0  ? '#444' :'#888'}}">
+                {{item.acceptStation}}
+                <i-icon type="mobilephone_fill" wx:if="{{ item.phone }}" color="#2d8cf0" size='30' bindtap='callPhone' data-phone='{{item.phone}}'/>
+            </view>
+        </i-step>
+      </i-steps>
+    </view>
+    
+  </view>
+  <i-load-more wx:else tip="暂无数据" loading="{{ false }}" />
+</view>
+

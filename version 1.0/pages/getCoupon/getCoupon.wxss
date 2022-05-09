@@ -1,0 +1,9 @@
+/* pages/getCoupon/getCoupon.wxss */
+page{ background: #FFF}
+.coupon-row{ display: flex; height: 100px; margin: 30rpx;}
+.coupon{ flex: 1; display: flex; justify-content: center; align-items: center; flex-direction: column; background: #fafafa; color: #333}
+.coupon-get{ width: 130px; background: #df3d40; display: flex; justify-content: center; align-items: center; color: #FFF; font-size: 30rpx}
+.coupon-get.ok{ background: #b7b7b7}
+.price{ font-size: 50rpx; color: #F00; margin: -20rpx 0;}
+.price text{ font-size: 80rpx;}
+.des{ font-size: 30rpx;}

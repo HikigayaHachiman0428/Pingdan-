@@ -1,0 +1,86 @@
+{
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "showES6CompileOption": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.19.1",
+  "appid": "wx482b7147c742e093",
+  "projectname": "pingdan",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "goodindex",
+          "pathName": "pages/good/index",
+          "query": "id=8d7e52a51c",
+          "scene": "1011"
+        },
+        {
+          "id": -1,
+          "name": "typeindex",
+          "pathName": "pages/type/index",
+          "query": "",
+          "scene": "1011"
+        },
+        {
+          "id": -1,
+          "name": "payorder",
+          "pathName": "pages/payorder/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "center",
+          "pathName": "pages/center/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "order",
+          "pathName": "pages/order/index",
+          "query": ""
+        }
+      ]
+    }
+  }
+}

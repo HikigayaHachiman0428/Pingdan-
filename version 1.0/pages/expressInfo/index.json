@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "查看物流",
+  "usingComponents": {
+    "i-load-more": "../../dist/iview/load-more/index",
+    "i-panel": "../../dist/iview/panel/index",
+    "i-steps": "../../dist/iview/steps/index",
+    "i-step": "../../dist/iview/step/index",
+    "i-icon": "../../dist/iview/icon/index"
+  }
+}

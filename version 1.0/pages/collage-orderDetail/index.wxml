@@ -1,0 +1,55 @@
+<!--pages/collage-orderDetail/index.wxml-->
+<view style="background:#fff;">
+  <view class='time'>剩余{{countDownDay}}天{{countDownHour}}小时{{countDownMinute}}分钟{{countDownSecond}}秒</view>
+  <view>
+    <view class="goods-info">
+        <view class="img-box">
+          <image src="{{detail.good.menu_logo}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="goods-title">{{detail.good.menu_name}}</view>
+          <view class="collage-people">{{detail.good.collage_people}}人团</view>
+          <view style='display:flex;'>
+            <view class="goods-price">¥ {{detail.good.collage_price}}</view>
+            <view class="good_number">剩余:{{detail.good.good_number}}</view>
+          </view>
+        </view>
+      </view>
+      
+    <view class="collage-info">
+      <view class="collage-infor">已有{{detail.people}}人参与,还差<span style="font-size:19px;color:red;">{{lackPeople}}</span>人拼团成功</view>
+      <view class="creator_info">
+        <view wx:for="{{collage_info}}" wx:key="item" >
+          <image src='{{item.orderUser.userPic}}' class='cover'></image>
+        </view>
+      </view>
+      
+    </view>
+    <view class="collage-join">
+      1、下单开团/参团  一  2、邀请好友参团  一  3、人满拼团成功
+    </view>
+    <view class='collage-detail'>拼团详情</view>
+    <view wx:for="{{collage_info}}" wx:key="item" class="collage_user">
+      <image src='{{item.orderUser.userPic}}' class='cover'></image>
+      <view class="collage_user_nickname">{{item.orderUser.nickName}}</view>
+      <view class="collage-time">{{item.createdAt}}</view>
+    </view>
+
+      <!--底部栏-->
+  <view class="Bill" >
+    <view class="takeBill bdt">
+        <view class="icon-wrap" bindtap="index">
+            <view class="zan-icon zan-icon-home" style="font-size: 36rpx"></view>
+            <view class= style="font-size: 22rpx;">拼团首页</view>
+        </view>
+        <button wx:if="{{own}}" class="box-right" bindtap="onShareAppMessage" open-type="share">
+        邀请好友参团
+        </button>
+        <view wx:else class="box-right" bindtap="join">
+        我要参团
+        </view>
+        
+    </view>
+  </view>
+  </view>
+</view>

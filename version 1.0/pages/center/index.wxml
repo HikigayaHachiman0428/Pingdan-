@@ -1,0 +1,94 @@
+<view class='server'>
+  <contact-button type="default-dark" size="27" session-from="weapp"></contact-button>
+</view>
+
+<view class="zan-pannel">
+
+  <view class="g-bda-userinfo">
+    <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+    <open-data class="userinfo-nickname" type="userNickName"></open-data>
+
+    <!-- 需要使用 button 来授权登录 -->
+
+  </view>
+
+</view>
+<view class="zan-panel" style="border-top:0px;border-bottom:0px;">
+
+</view>
+<loading hidden="{{loading}}">
+    授权中...
+</loading>
+<view class="container">
+  <view wx:if="{{userInfo.nickName}}"></view>
+  <view wx:else class="zan-panel" style="border-top:0px;border-bottom:0px;">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd">解锁更多功能</view>
+    </view>
+    <view class="zan-cell" style="margin:0px;padding:12px 0px;"> 
+      <button bindtap="getUserProfile" class="open">
+        <image src="/images/open.png" class="open-img"></image>
+        <view class="open-word">点击解锁按钮解锁更多功能</view>
+      </button> 
+    </view>
+  </view>
+  
+
+  <view class="zan-panel" style="border-top:0px;border-bottom:0px;">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd">我的订单</view>
+      <navigator url="/pages/order/index">
+        <view class="zan-cell__ft smallsize" bindtap="more">查看全部订单</view>
+      </navigator>
+    </view>
+
+    <view class="zan-cell" style="margin:0px;padding:12px 0px;">
+      <view class="zan-cell__bd">
+        <view class="icon-wrap">
+          <navigator url='../order/index?id=1'>
+            <view class="zan-icon zan-icon-topay" style="font-size: 25px;"></view>
+            <view class="icon-classname smallsize">待付款</view>
+          </navigator>
+        </view>
+        <view class="icon-wrap">
+          <navigator url='../order/index?id=2'>
+            <view class="zan-icon zan-icon-tosend" style="font-size: 25px;"></view>
+            <view class="icon-classname smallsize">待发货</view>
+          </navigator>
+        </view>
+        <view class="icon-wrap">
+          <navigator url='../order/index?id=3'>
+            <view class="zan-icon zan-icon-send" style="font-size: 25px;"></view>
+            <view class="icon-classname smallsize">待收货</view>
+          </navigator>
+        </view>
+        <view class="icon-wrap">
+          <navigator url='../order/index?id=4'>
+            <view class="zan-icon zan-icon-sign" style="font-size: 25px;"></view>
+            <view class="icon-classname smallsize">已完成</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="zan-panel" style="border-top:0px;border-bottom:0px;">
+    <view class="zan-cell zan-cell--access" bindtap="cart">
+      <view class="zan-cell__bd">购物车</view>
+      <view class="zan-cell__ft smallsize" bindtap="more"></view>
+    </view>
+    <view class="zan-cell zan-cell--access" bindtap="sale">
+      <view class="zan-cell__bd">优惠券</view>
+      <view class="zan-cell__ft smallsize" bindtap="more"></view>
+    </view>
+    <view class="zan-cell zan-cell--access" bindtap="collage">
+      <view class="zan-cell__bd">拼团</view>
+      <view class="zan-cell__ft smallsize" bindtap="collage"></view>
+    </view>
+    <view class="zan-cell zan-cell--access" bindtap="feedback">
+      <view class="zan-cell__bd">反馈建议</view>
+      <view class="zan-cell__ft smallsize" bindtap="more"></view>
+    </view>
+  </view>
+</view>

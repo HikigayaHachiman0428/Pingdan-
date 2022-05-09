@@ -1,0 +1,54 @@
+<view class="goodsList">
+  <view class="a-gooods">
+    <view>
+      <view class="goods-info">
+        <view class="img-box">
+          <image src="{{detail.menu_logo}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="goods-title">{{detail.menu_name}}</view>
+          <view class="collage-people">{{detail.collage_people}}人团</view>
+          <view style='display:flex;'>
+            <view class="goods-price">¥ {{detail.collage_price}}</view>
+            <view class="good_number">剩余:{{detail.good_number}}</view>
+          </view>
+          
+        </view>
+      </view>
+      <view class="collage-join">
+      1、下单开团/参团  一  2、邀请好友参团  一  3、人满拼团成功
+      </view>
+      <view class="collage">
+        <view class="collage-word">支付开团并邀请好友参加,人数不足退款</view>
+        <view style='display:flex'>
+          <button class="button-collage button-join" bindtap="attend">我要参团</button>
+          <button class="button-collage button-start" bindtap='payOrder'>我要开团</button>
+        </view>
+      </view>
+      <view class="collage-more">
+        <view class="collage-more-word">更多好团</view>
+        <view>
+          <view class='type-detail'>
+            <block wx:if="{{goodList.length}}">
+              <navigator url='../collage-detail/index?id={{item.objectId}}' wx:for="{{goodList}}" wx:key="item">
+                <image mode='aspectFill' src="{{item.menu_logo}}"></image>
+                <view class='book-detail'>
+                  <text>{{item.menu_name}}</text>
+                  <view>
+                    <text class='money'>￥{{item.collage_price}}</text>
+                    <view class='operations smallsize'>剩余：{{item.good_number}}</view>
+                  </view>
+                </view>
+              </navigator>
+            </block>
+            <block wx:else>
+              <view class='nodata'>
+                暂无更多推荐
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+     <view class="zan-cell">
+            <view class="zan-cell__bd">
+                <view class="zan-pull-left smallsize">下单时间：{{item.createdAt}}</view>
+                <view class="zan-pull-right" style="color:red">{{item.status}}</view>
+            </view>
+            </view>
+            <view class="zan-cell">
+            </view>
+            <view class="zan-card">
+              <view class="zan-card__thumb">
+                  <image class="zan-card__img"
+                  src="{{item.detail.goodId.menu_logo}}"
+                  mode="aspectFit"
+                  ></image>
+              </view>
+              <view class="zan-card__detail" style="display:flex;flex-direction:column;height:90px;">
+                  <view class="zan-card__detail-row">
+                    <view class="zan-card__right-col">¥ {{item.detail.goodId.collage_price}}</view>
+                    <view class="zan-card__left-col">
+                        {{item.detail.goodId.menu_name}}
+                    </view>
+                  </view>
+                  <view class="zan-card__detail-row zan-c-gray-darker">
+                    <view class="zan-card__right-col">x1</view>
+                    <view class="zan-card__left-col">
+                        商品数量
+                    </view>
+                  </view>
+              </view>
+            </view>
+
+            <view class="zan-panel" style="padding: 5px;">
+             <view class="zan-pull-left count">合计：￥{{item.detail.goodId.collage_price}}</view>
+            </view>

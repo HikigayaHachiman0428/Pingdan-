@@ -1,0 +1,166 @@
+/* pages/collage-orderDetail/index.wxss */
+page{
+  background: #eeeeee;
+}
+.time {
+  height: 28px;
+  background: #ffe5e8;
+  font-size: 12px;
+  text-align: center;
+  line-height: 28px;
+  color: #ff0019;
+}
+
+.goods-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0 30rpx 70rpx;
+  width: 720rpx;
+  box-sizing: border-box;
+}
+
+.goods-info .img-box {
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+  background-color: #d8d8d8;
+}
+
+.goods-info .img-box .img {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.goods-info .text-box {
+  width: 440rpx;
+  position: relative;
+}
+
+.goods-info .text-box .goods-title {
+  font-size: 28rpx;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10rpx 20rpx 5rpx 0;
+}
+
+.goods-info .text-box .goods-label {
+  font-size: 26rpx;
+  color: #999;
+  height: 38rpx;
+  line-height: 38rpx;
+  margin: 8rpx 0 25rpx 0;
+}
+
+.goods-info .text-box .goods-price {
+  font-size: 30rpx;
+  color: #e64340;
+  margin-top: 6px;
+}
+
+.goods-info .text-box .buy-num {
+  width: 164rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  position: absolute;
+  right: 30rpx;
+  bottom: 0;
+  display: flex;
+  /*justify-content: space-between;*/
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.good_number {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 11px;
+  margin-left: 115px;
+}
+
+.collage-people {
+  font-size: 13px;
+  color: red;
+}
+
+.collage-info {
+  width: 100%;
+  background: #ededed;
+  height: 220rpx;
+  margin-bottom: 20px;
+}
+
+.collage-info image {
+  width: 30px;
+  height: 30px;
+  border-radius: 48%;
+}
+
+.collage-join {
+  height: 32px;
+  background: #f2f2f2;
+  font-size: 11px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.collage-infor {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.creator_info {
+  display: flex;
+  justify-content: center;
+}
+
+.collage-detail {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+  border-bottom: 0.5px solid #a09f9f;
+}
+.cover{
+  width: 30px;
+  height: 30px;
+  border-radius: 48%;
+}
+.collage_user{
+  display: flex;
+  margin: 8px;
+  padding-bottom:8px;
+
+}
+.collage_user_nickname{
+  font-size:14px;
+  margin: 0 6px;
+  line-height:30px;
+  height:30px;
+}
+.collage-time{
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  position: fixed;
+  right:10px;
+}
+.Bill-layer{width: 100%;height:100%;background:#000;opacity:0.5;position:fixed;left:0;top:0;z-index:1;}
+.Bill{position:fixed;left:0;bottom:0;width:100%;z-index:2;}
+.takeBill{height:88rpx;background:#fff;position:relative;}
+.takeBill .box-right{width:626rpx;height:90rpx;background:#d81e06;position:absolute;right:0;border-radius:0;color:#fff;line-height:90rpx;text-align:center;font-size:30rpx;}
+.takeBill .ml{background:#FF8247;right:315rpx;color:#fff;}
+.icon-wrap {
+  width: 123rpx;
+  height: 100%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  display:flex;
+  flex-direction:column;
+}

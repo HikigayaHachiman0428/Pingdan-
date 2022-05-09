@@ -1,0 +1,7 @@
+<!--pages/brand/brand.wxml-->
+<view class='brand-row'>
+   <navigator class='brand-item' wx:for="{{brand}}" url='../brandShop/brandShop?id={{item.id}}' wx:key="item">
+    <image src='{{item.logo}}' mode='aspectFill'></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>

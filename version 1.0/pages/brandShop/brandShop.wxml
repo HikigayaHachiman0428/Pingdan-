@@ -1,0 +1,20 @@
+<!--pages/brandShop/brandShop.wxml-->
+<view class='type-detail'>
+  <block wx:if="{{data.length}}">
+    <navigator url='../good/index?id={{item.objectId}}' wx:for="{{data}}" wx:key="item">
+      <image mode='aspectFill' src="{{item.menu_logo}}"></image>
+      <view class='book-detail'>
+        <text>{{item.menu_name}}</text>
+        <view>
+          <text class='money'>￥{{item.price}}</text>
+          <view class='operations smallsize'>销量：{{item.sale_number}}</view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+  <block wx:else>
+    <view class='nodata'>
+      该品牌目前还没有商品
+    </view>
+  </block>
+</view>

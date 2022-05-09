@@ -1,0 +1,17 @@
+<!--pages/getCoupon/getCoupon.wxml-->
+<view class='coupon-row' wx:for="{{coupon}}" wx:key="item">
+  <view class='coupon'>
+    <view class='price'>
+      ￥<text>{{ item.price }}</text>
+    </view>
+    <view class='des'>
+      满<text class='maxprice'>{{item.nprice}}</text>元可用
+    </view>
+  </view>
+  <block wx:if="{{item.status}}">
+    <view class='coupon-get' bindtap='getCoupon' data-id="{{ item.objectId }}" data-index="{{index}}">立即领取</view>
+  </block>
+  <block wx:else>
+    <view class='coupon-get ok'>已领取</view>
+  </block>
+</view>

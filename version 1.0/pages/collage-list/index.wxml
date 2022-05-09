@@ -1,0 +1,32 @@
+<import src="../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+
+<view class='search'>
+  <view class='search-value'>
+    <input placeholder='搜索商品' value='{{searchVal}}' bindconfirm="search" bindinput="input"></input>
+    <view class='clear' wx:if="{{ searchVal != '' }}" bindtap='clear'>
+      <image src='../../images/clear.png'></image>
+    </view>
+  </view>
+  <view class='search-button' bindtap='search'>
+   <image src='../../images/search.png'></image>
+  </view>
+</view>
+
+<view class='list'>
+  <view wx:if="{{ goods.length <= 0 }}" class="nogoods">
+    暂无商品
+  </view>
+  <view class='item-row' wx:for="{{goods}}" wx:key="item" bindtap='router' data-id="{{ item.id }}">
+   <image src='{{item.image}}' class='cover'></image>
+   <view class='decs'>
+    <text class='people'>{{item.collage_people}}人团</text>
+    <text class='title'>{{item.title}}</text>
+    <view class='price'>
+      <text class='new'>{{item.collage_price}}</text>
+      <text class='old'>{{item.price}}</text>
+    </view>
+    <view class='btn'>去拼团</view>
+   </view>
+  </view>
+</view>
